@@ -42,8 +42,8 @@ class Permaswap:
     
     def place_order(self, order):
         bundle = everpay.load_bundle(order)
-        sign = self.account.sign(bundle.get_data_to_sign())
-        bundle.add_sig(self.account.address, sign)
+        sig = self.account.sign_bundle(bundle.get_data_to_sign())
+        bundle.add_sig(self.account.address, sig)
         submit_order = {
             'event': 'submit',
             'address': self.account.address,
