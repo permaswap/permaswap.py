@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='permaswap',
-    version='0.1.1',
+    version='0.1.2',
     packages=['permaswap',],
     license='MIT',
     description = 'Python wrappers for permaswap',
@@ -12,7 +12,7 @@ setuptools.setup(
     author_email = 'e2d8nnhp8@gmail.com',
     install_requires=['everpay', 'websocket-client'],
     url = 'https://github.com/permaswap/permaswap.py',
-    download_url = 'https://github.com/permaswap/permaswap.py/archive/refs/tags/v0.1.1.tar.gz',
+    download_url = 'https://github.com/permaswap/permaswap.py/archive/refs/tags/v0.1.2.tar.gz',
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 2",
