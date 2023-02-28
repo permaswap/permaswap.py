@@ -12,6 +12,7 @@ pip install permaswap
 1. perpare everpay account
 
 ```python
+import everpay
 api_server = 'https://api-dev.everpay.io'
 
 # eth account
@@ -33,6 +34,7 @@ swap = permaswap.Permaswap(router_host, account)
 3. query order
 
 ```python
+import permaswap
 # get_order('token_in', 'token_out', 'amount_in')
 # sell 1 tar for tusdc
 order = swap.get_order('tAR', 'tUSDC', 10**12)
