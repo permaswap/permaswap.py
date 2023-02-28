@@ -4,7 +4,7 @@ api_server = 'https://api-dev.everpay.io'
 router_host = 'wss://router0-dev.permaswap.network/'
 
 #put your private key of eth account
-pk = '9259ecfa1a5e4b494c93985162c84d4d7f7d7d90d62bffa0d855a5981629bfa3'
+pk = ''
 signer = everpay.ETHSigner(pk)
 
 #ar account

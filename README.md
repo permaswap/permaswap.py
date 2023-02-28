@@ -28,7 +28,7 @@ account = everpay.Account(api_server, signer)
 
 ```python
 router_host = 'wss://router0-dev.permaswap.network/'
-swap = permaswap.Permaswap(router_host, account)
+swap = permaswap.Swap(router_host, account)
 ```
 
 3. query order
