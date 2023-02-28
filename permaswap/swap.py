@@ -29,8 +29,9 @@ class Swap:
         }
         ws = create_connection(self.router_url)
         ws.send(json.dumps(query))
-        order = json.loads(ws.recv())
-        if order['event'] == 'order':
+        data = json.loads(ws.recv())
+        if data['event'] == 'order':
+            order = data
             order['tokenIn'] = token_in_tag
             order['tokenOut'] = token_out_tag
             order['amount_in'] = str(amount_in)
@@ -39,6 +40,8 @@ class Swap:
             order['amount_out2'] = str(Decimal(int(order['amount_out']))/Decimal(10**token_out_decimals))
             order['rate'] = float(order['amount_out2'])/float(order['amount_in2'])
             return order
+        
+        return data
     
     def place_order(self, order):
         bundle = everpay.load_bundle(order)
