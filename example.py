@@ -4,14 +4,14 @@ api_server = 'https://api-dev.everpay.io'
 router_host = 'wss://router0-dev.permaswap.network/'
 
 #put your private key of eth account
-pk = ''
+pk = '9259ecfa1a5e4b494c93985162c84d4d7f7d7d90d62bffa0d855a5981629bfa3'
 signer = everpay.ETHSigner(pk)
 
 #ar account
 #signer = everpay.ARSigner('arweave-keyfile-xxx.json')
 account = everpay.Account(api_server, signer)
 
-swap = permaswap.Permaswap(router_host, account)
+swap = permaswap.Swap(router_host, account)
 
 # sell 1 tar to get tusdc
 order = swap.get_order('tAR', 'tUSDC', 10**12)
