@@ -1,7 +1,7 @@
 import permaswap
 import everpay
 api_server = 'https://api-dev.everpay.io'
-router_host = 'wss://router0-dev.permaswap.network/'
+router_host = 'wss://router-dev.permaswap.network/'
 
 #put your private key of eth account
 pk = ''

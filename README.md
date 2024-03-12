@@ -26,8 +26,11 @@ account = everpay.Account(api_server, signer)
 
 2. init permaswap
 
+testnet: 'wss://router-dev.permaswap.network/'
+mainnet: 'wss://router.permaswap.network/'
+
 ```python
-router_host = 'wss://router0-dev.permaswap.network/'
+router_host = 'wss://router-dev.permaswap.network/'
 swap = permaswap.Swap(router_host, account)
 ```
 
